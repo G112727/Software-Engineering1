@@ -22,7 +22,7 @@ namespace Software_Engineering1
             LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle, this.TopColor, this.BottomColor, this.Angle);
             Graphics g = e.Graphics;
             g.FillRectangle(brush, this.ClientRectangle );
-            base.OnPaint(e);
+            //base.OnPaint(e);
         }
 
 

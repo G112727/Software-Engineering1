@@ -245,7 +245,7 @@
             this.gradientPanel3.Controls.Add(this.button5);
             this.gradientPanel3.Controls.Add(this.textBox1);
             this.gradientPanel3.Controls.Add(this.pictureBox2);
-            this.gradientPanel3.Location = new System.Drawing.Point(996, 55);
+            this.gradientPanel3.Location = new System.Drawing.Point(996, 27);
             this.gradientPanel3.Name = "gradientPanel3";
             this.gradientPanel3.Size = new System.Drawing.Size(323, 589);
             this.gradientPanel3.TabIndex = 2;
@@ -391,7 +391,7 @@
             this.button12.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
             this.button12.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button12.Location = new System.Drawing.Point(36, 75);
+            this.button12.Location = new System.Drawing.Point(36, 16);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(134, 91);
             this.button12.TabIndex = 5;
@@ -482,7 +482,7 @@
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox4.ForeColor = System.Drawing.Color.Snow;
-            this.textBox4.Location = new System.Drawing.Point(217, 55);
+            this.textBox4.Location = new System.Drawing.Point(216, 38);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(750, 23);
             this.textBox4.TabIndex = 10;

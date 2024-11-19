@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
+using System.Data.SqlClient;
+
 
 namespace Software_Engineering1
 {
@@ -121,8 +122,7 @@ namespace Software_Engineering1
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form4 form4 = new Form4();
-            form4.ShowDialog();
+           
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -136,6 +136,11 @@ namespace Software_Engineering1
         }
 
         private void label7_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roundedPanel4_Paint(object sender, PaintEventArgs e)
         {
 
         }

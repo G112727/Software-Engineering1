@@ -117,10 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Join Mark for a mindful kick boxing session for all levels.
- Includes yoga, sometimes animal flow, breathing qi gong and relaxation, 
-along with techniques, drills, punches and kicks.
- This class will be about providing the hard and the soft.</value>
-  </data>
 </root>

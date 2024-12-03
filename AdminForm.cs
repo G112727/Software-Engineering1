@@ -77,38 +77,7 @@ namespace Software_Engineering1
 
         private void btnApproveMember_Click_1(object sender, EventArgs e)
         {
-            //string username = txtUsernameToApprove.Text.Trim();
-
-            //if (string.IsNullOrEmpty(username))
-            //{
-            //    MessageBox.Show("Please enter a username to approve.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //    return;
-            //}
-
-            //using (MySqlConnection connection = new MySqlConnection(connectionString))
-            //{
-            //    try
-            //    {
-            //        connection.Open();
-            //        string query = "UPDATE Users SET IsApproved = 1 WHERE Username = @username";
-            //        MySqlCommand command = new MySqlCommand(query, connection);
-            //        command.Parameters.AddWithValue("@username", username);
-
-            //        int rowsAffected = command.ExecuteNonQuery();
-            //        if (rowsAffected > 0)
-            //        {
-            //            MessageBox.Show("Member approved successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //        }
-            //        else
-            //        {
-            //            MessageBox.Show("Username not found or already approved.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //        }
-            //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    }
-            //}
+ 
         }
 
         private void LoadPendingApprovals()
@@ -151,10 +120,10 @@ namespace Software_Engineering1
                     {
                         connection.Open();
                         string query = @"
-                    UPDATE Users
-                    SET IsApproved = TRUE,
-              
-                    WHERE UserID = @userId";
+                                        UPDATE Users
+                                        SET IsApproved = TRUE
+                                        WHERE UserID = @userId";
+
                         MySqlCommand command = new MySqlCommand(query, connection);
                         command.Parameters.AddWithValue("@userId", userId);
                      

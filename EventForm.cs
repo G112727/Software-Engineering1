@@ -438,7 +438,7 @@ namespace Software_Engineering1
         {
            
             string currentUsername = LoggedInUser.Username;
-            ProfilePage profilePage = new ProfilePage(connectionString, currentUsername);
+            ProfilePage profilePage = new ProfilePage(currentUsername);
             profilePage.Show();
         }
 

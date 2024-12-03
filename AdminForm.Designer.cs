@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPendingApprovals = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPendingApprovals)).BeginInit();
@@ -42,6 +43,7 @@
             // roundedPanel1
             // 
             this.roundedPanel1.BorderRadius = 20;
+            this.roundedPanel1.Controls.Add(this.button2);
             this.roundedPanel1.Controls.Add(this.label2);
             this.roundedPanel1.Controls.Add(this.dataGridView1);
             this.roundedPanel1.Controls.Add(this.label1);
@@ -110,6 +112,15 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(697, 493);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(136, 37);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Sign Out";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // AdminForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -134,5 +145,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button2;
     }
 }

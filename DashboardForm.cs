@@ -18,6 +18,7 @@ namespace Software_Engineering1
         {
             InitializeComponent();
             DisplayMemberCount();
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -142,7 +143,7 @@ namespace Software_Engineering1
         private void label8_Click(object sender, EventArgs e)
         {
             string currentUsername = LoggedInUser.Username;
-            ProfilePage profilePage = new ProfilePage(connectionString, currentUsername);
+            ProfilePage profilePage = new ProfilePage(currentUsername);
             profilePage.Show();
         }
     }

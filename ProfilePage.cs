@@ -13,9 +13,9 @@ namespace Software_Engineering1
 {
     public partial class ProfilePage : Form
     {
-        private string connectionString;
+        private string connectionString = "server=localhost;database=theevents;uid=root;pwd=;";
         private string currentUsername;
-        public ProfilePage(string connectionString, string currentUsername)
+        public ProfilePage(string currentUsername)
         {
             InitializeComponent();
             this.currentUsername = currentUsername;

@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySqlConnector;
-using static Software_Engineering1.Form6;
+using static Software_Engineering1.DashboardForm;
 
 
 namespace Software_Engineering1
 {
-    public partial class Form5 : Form
+    public partial class LoginForm : Form
     {
 
         private string connectionString = "server=localhost;database=theevents;uid=root;pwd=;";
-        public Form5()
+        public LoginForm()
         {
             InitializeComponent();
         }
@@ -62,12 +62,12 @@ namespace Software_Engineering1
                             
                             if (role == "Admin")
                             {
-                                Form4 form4 = new Form4(connectionString);
+                                AdminForm form4 = new AdminForm(connectionString);
                                 form4.Show();
                             }
                             else
                             {
-                                Form6 form6 = new Form6();
+                                DashboardForm form6 = new DashboardForm();
                                 form6.Show();
                             }
 
@@ -155,6 +155,12 @@ namespace Software_Engineering1
         private void txtUsername_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            ForgetpasswordForm forgetpasswordForm = new ForgetpasswordForm();
+            forgetpasswordForm.Show();
         }
     }
 }

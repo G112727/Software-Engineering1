@@ -9,16 +9,16 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using MySqlConnector;
-using static Software_Engineering1.Form6;
+using static Software_Engineering1.DashboardForm;
 
 
 namespace Software_Engineering1
 {
     
-    public partial class Form1 : Form
+    public partial class EventForm : Form
     {
-         
-        public Form1()
+        string connectionString = "server=localhost;uid=root;pwd=;database=theevents";
+        public EventForm()
         {
             InitializeComponent();
         }
@@ -30,7 +30,7 @@ namespace Software_Engineering1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            label18.Text = $": {LoggedInUser.Username}";
+            label18.Text = $"{LoggedInUser.Username}";
         }
 
         private void button2_MouseEnter(object sender, EventArgs e)
@@ -40,12 +40,16 @@ namespace Software_Engineering1
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            DashboardForm dashboardForm = new DashboardForm();
+            dashboardForm.Show();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            membershipForm membershipForm = new membershipForm();
+            membershipForm.Show();
+            this.Hide();
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
@@ -125,7 +129,7 @@ namespace Software_Engineering1
         private void button5_Click(object sender, EventArgs e)
         {
 
-            string connectionString = "server=localhost;database=theevents;uid=root;pwd=;";
+           
             string searchedEvent = textBox1.Text.Trim();
 
             if (string.IsNullOrEmpty(searchedEvent))
@@ -232,17 +236,17 @@ namespace Software_Engineering1
             {
                 MessageBox.Show("Please log in to access this feature.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.Hide();
-                Form5 form5 = new Form5();
-                form5.Show();
+                LoginForm loginForm = new LoginForm();
+                loginForm.Show();
             }
 
             else
             {
                 string eventname = Mindfull_Kickboxing.Name;
                 eventname = eventname.Replace("_", " ");
-                Form2 form2 = new Form2();
-                form2.LoadEventDetail(eventname);
-                form2.Show();
+                BookingForm bookingForm = new BookingForm();
+                bookingForm.LoadEventDetail(eventname);
+                bookingForm.Show();
             }
 
         }
@@ -318,7 +322,7 @@ namespace Software_Engineering1
 
         private void button12_Click(object sender, EventArgs e)
         {
-            Form5 form5 = new Form5();
+            LoginForm form5 = new LoginForm();
             form5.Show();
         }
 
@@ -328,7 +332,7 @@ namespace Software_Engineering1
             {
                 MessageBox.Show("Please log in to access this feature.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.Hide();
-                Form5 form5 = new Form5();
+                LoginForm form5 = new LoginForm();
                 form5.Show();
             }
 
@@ -336,7 +340,7 @@ namespace Software_Engineering1
             {
                 string eventname = Turn_Up_and_Write.Name;
                 eventname = eventname.Replace("_", " ");
-                Form2 form2 = new Form2();
+                BookingForm form2 = new BookingForm();
                 form2.LoadEventDetail(eventname);
                 form2.Show();
             }
@@ -344,7 +348,7 @@ namespace Software_Engineering1
 
         private void label18_Click(object sender, EventArgs e)
         {
-            Form5 form5 = new Form5();
+            LoginForm form5 = new LoginForm();
             form5.Show();
 
         }
@@ -355,7 +359,7 @@ namespace Software_Engineering1
             {
                 MessageBox.Show("Please log in to access this feature.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.Hide();
-                Form5 form5 = new Form5();
+                LoginForm form5 = new LoginForm();
                 form5.Show();
             }
 
@@ -363,7 +367,7 @@ namespace Software_Engineering1
             {
                 string eventname = Partner_Assisted_Yoga.Name;
                 eventname = eventname.Replace("_", " ");
-                Form2 form2 = new Form2();
+                BookingForm form2 = new BookingForm();
                 form2.LoadEventDetail(eventname);
                 form2.Show();
             }
@@ -375,7 +379,7 @@ namespace Software_Engineering1
             {
                 MessageBox.Show("Please log in to access this feature.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.Hide();
-                Form5 form5 = new Form5();
+                LoginForm form5 = new LoginForm();
                 form5.Show();
             }
 
@@ -383,7 +387,7 @@ namespace Software_Engineering1
             {
                 string eventname = Focusing_Workshop.Name;
                 eventname = eventname.Replace("_", " ");
-                Form2 form2 = new Form2();
+                BookingForm form2 = new BookingForm();
                 form2.LoadEventDetail(eventname);
                 form2.Show();
             }
@@ -396,7 +400,7 @@ namespace Software_Engineering1
             {
                 MessageBox.Show("Please log in to access this feature.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.Hide();
-                Form5 form5 = new Form5();
+                LoginForm form5 = new LoginForm();
                 form5.Show();
             }
 
@@ -404,7 +408,7 @@ namespace Software_Engineering1
             {
                 string eventname = Art_Gathering.Name;
                 eventname = eventname.Replace("_", " ");
-                Form2 form2 = new Form2();
+                BookingForm form2 = new BookingForm();
                 form2.LoadEventDetail(eventname);
                 form2.Show();
             }
@@ -416,7 +420,7 @@ namespace Software_Engineering1
             {
                 MessageBox.Show("Please log in to access this feature.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.Hide();
-                Form5 form5 = new Form5();
+                LoginForm form5 = new LoginForm();
                 form5.Show();
             }
 
@@ -424,10 +428,23 @@ namespace Software_Engineering1
             {
                 string eventname = Monthly_Restorative_Rest.Name;
                 eventname = eventname.Replace("_", " ");
-                Form2 form2 = new Form2();
+                BookingForm form2 = new BookingForm();
                 form2.LoadEventDetail(eventname);
                 form2.Show();
             }
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+           
+            string currentUsername = LoggedInUser.Username;
+            ProfilePage profilePage = new ProfilePage(connectionString, currentUsername);
+            profilePage.Show();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Software_Engineering1
 {
-    public partial class Form3 : Form
+    public partial class SearchForm : Form
     {
-        public Form3()
+        public SearchForm()
         {
             InitializeComponent();
         }

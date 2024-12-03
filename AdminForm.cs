@@ -12,13 +12,13 @@ using MySqlConnector;
 namespace Software_Engineering1
 {
 
-    public partial class Form4 : Form
+    public partial class AdminForm : Form
     {
         
 
         string connectionString;
 
-        public Form4(string connectionString)
+        public AdminForm(string connectionString)
         {
             InitializeComponent();
             this.connectionString = connectionString;
@@ -139,13 +139,6 @@ namespace Software_Engineering1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string MembershipType = comboBox1.SelectedItem?.ToString();
-
-            if (string.IsNullOrEmpty(MembershipType))
-            {
-                MessageBox.Show("Please select a membership type.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
 
             if (dgvPendingApprovals.SelectedRows.Count > 0)
             {
@@ -160,11 +153,11 @@ namespace Software_Engineering1
                         string query = @"
                     UPDATE Users
                     SET IsApproved = TRUE,
-                        MembershipType = @MembershipType
+              
                     WHERE UserID = @userId";
                         MySqlCommand command = new MySqlCommand(query, connection);
                         command.Parameters.AddWithValue("@userId", userId);
-                        command.Parameters.AddWithValue("@MembershipType", MembershipType);
+                     
 
 
                         int rowsAffected = command.ExecuteNonQuery();
@@ -206,6 +199,11 @@ namespace Software_Engineering1
         }
 
         private void dgvPendingApprovals_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

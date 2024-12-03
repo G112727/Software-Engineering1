@@ -1,6 +1,6 @@
 ﻿namespace Software_Engineering1
 {
-    partial class Form5
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form5));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.gradientPanel1 = new Software_Engineering1.GradientPanel();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
@@ -46,6 +47,7 @@
             this.gradientPanel1.Angle = 0F;
             this.gradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.gradientPanel1.BottomColor = System.Drawing.Color.Firebrick;
+            this.gradientPanel1.Controls.Add(this.label3);
             this.gradientPanel1.Controls.Add(this.label2);
             this.gradientPanel1.Controls.Add(this.label1);
             this.gradientPanel1.Controls.Add(this.txtUsername);
@@ -59,6 +61,16 @@
             this.gradientPanel1.Size = new System.Drawing.Size(800, 450);
             this.gradientPanel1.TabIndex = 4;
             this.gradientPanel1.TopColor = System.Drawing.Color.IndianRed;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(525, 315);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(125, 16);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Change Paasword?";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -132,13 +144,13 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // Form5
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gradientPanel1);
-            this.Name = "Form5";
+            this.Name = "LoginForm";
             this.Text = "Form5";
             this.Load += new System.EventHandler(this.Form5_Load);
             this.gradientPanel1.ResumeLayout(false);
@@ -158,5 +170,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
     }
 }

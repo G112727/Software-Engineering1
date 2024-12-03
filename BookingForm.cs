@@ -11,23 +11,23 @@ using System.Windows.Forms;
 using Microsoft.Extensions.Logging;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static Software_Engineering1.Class1;
-using static Software_Engineering1.Form6;
-using static Software_Engineering1.Form7;
+using static Software_Engineering1.DashboardForm;
+
 
 namespace Software_Engineering1
 {
-    public partial class Form2 : Form
+    public partial class BookingForm : Form
     {
         
         private string EventName;
         private string EventDescription;
         private DateTime EventDate;
 
-        public Form2()
+        public BookingForm()
         {
             InitializeComponent();
         }
-        public Form2(int eventid, string eventname, string eventdescription, DateTime eventdate)
+        public BookingForm(int eventid, string eventname, string eventdescription, DateTime eventdate)
         {
             
             

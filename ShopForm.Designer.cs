@@ -163,6 +163,7 @@
             this.button3.Text = "Membership";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -182,6 +183,7 @@
             this.button2.Text = "Home";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -200,6 +202,7 @@
             this.button1.Text = "Events";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
@@ -232,7 +235,7 @@
             this.flowLayoutPanel1.Controls.Add(this.pictureBox7);
             this.flowLayoutPanel1.Controls.Add(this.pictureBox6);
             this.flowLayoutPanel1.Controls.Add(this.pictureBox9);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(40, 227);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(40, 224);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(1228, 400);
             this.flowLayoutPanel1.TabIndex = 16;

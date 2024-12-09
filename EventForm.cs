@@ -75,7 +75,8 @@ namespace Software_Engineering1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            ShopForm shopform = new ShopForm();
+            shopform.Show();
         }
 
         private void button9_Click(object sender, EventArgs e)

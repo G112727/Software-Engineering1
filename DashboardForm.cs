@@ -146,5 +146,12 @@ namespace Software_Engineering1
             ProfilePage profilePage = new ProfilePage(currentUsername);
             profilePage.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ShopForm shopform = new ShopForm();
+            shopform.Show();
+            this.Hide();
+        }
     }
 }

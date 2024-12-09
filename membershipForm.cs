@@ -94,7 +94,6 @@ namespace Software_Engineering1
         {
             EventForm form1 = new EventForm();
             form1.Show();
-
             this.Hide();
         }
 
@@ -107,7 +106,8 @@ namespace Software_Engineering1
 
         private void button4_Click(object sender, EventArgs e)
         {
-
+            ShopForm shopform = new ShopForm();
+            shopform.Show();
         }
     }
 }

@@ -16,5 +16,25 @@ namespace Software_Engineering1
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DashboardForm dashboardForm = new DashboardForm();
+            dashboardForm.Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            EventForm eventForm = new EventForm();
+            eventForm.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            membershipForm membershipform = new membershipForm();
+            membershipform.Show();
+            this.Close();
+        }
     }
 }

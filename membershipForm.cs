@@ -104,5 +104,10 @@ namespace Software_Engineering1
             dashboardForm.Show();
             this.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

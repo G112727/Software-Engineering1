@@ -93,7 +93,7 @@
             this.button3.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(682, 7);
+            this.button3.Location = new System.Drawing.Point(648, 10);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(130, 37);
             this.button3.TabIndex = 3;
@@ -112,7 +112,7 @@
             this.button1.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(464, 8);
+            this.button1.Location = new System.Drawing.Point(446, 8);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 37);
             this.button1.TabIndex = 2;
@@ -131,9 +131,9 @@
             this.button4.Font = new System.Drawing.Font("Modern No. 20", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(898, 3);
+            this.button4.Location = new System.Drawing.Point(892, 11);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(119, 37);
+            this.button4.Size = new System.Drawing.Size(66, 37);
             this.button4.TabIndex = 4;
             this.button4.Text = "shop";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -182,7 +182,7 @@
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(1084, 13);
+            this.label19.Location = new System.Drawing.Point(1068, 17);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(56, 21);
             this.label19.TabIndex = 7;
@@ -194,7 +194,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label18.Location = new System.Drawing.Point(1196, 13);
+            this.label18.Location = new System.Drawing.Point(1220, 14);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(71, 24);
             this.label18.TabIndex = 6;

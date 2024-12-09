@@ -25,12 +25,12 @@ namespace Software_Engineering1
 
         }
 
-        private void btnAssignMembershipType_Click(object sender, EventArgs e)
-        {
+        //private void btnAssignMembershipType_Click(object sender, EventArgs e)
+        //{
            
            
 
-        }
+        //}
 
 
         private void LoadUserBookings()
@@ -69,16 +69,16 @@ namespace Software_Engineering1
 
        
 
-        private void btnAssignMembershipType_Click_1(object sender, EventArgs e)
-        {
+        //private void btnAssignMembershipType_Click_1(object sender, EventArgs e)
+        //{
            
-        }
+        //}
 
 
-        private void btnApproveMember_Click_1(object sender, EventArgs e)
-        {
+        //private void btnApproveMember_Click_1(object sender, EventArgs e)
+        //{
  
-        }
+        //}
 
         private void LoadPendingApprovals()
         {
@@ -175,6 +175,17 @@ namespace Software_Engineering1
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void roundedPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DashboardForm dashboardForm = new DashboardForm();
+            dashboardForm.Show();
         }
     }
 }

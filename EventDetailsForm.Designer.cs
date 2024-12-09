@@ -60,16 +60,16 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.roundedPanel1);
-            this.panel1.Location = new System.Drawing.Point(34, 5);
+            this.panel1.Location = new System.Drawing.Point(24, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(703, 668);
+            this.panel1.Size = new System.Drawing.Size(703, 552);
             this.panel1.TabIndex = 13;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(35, 322);
+            this.label12.Location = new System.Drawing.Point(46, 328);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(147, 36);
             this.label12.TabIndex = 34;
@@ -80,7 +80,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Calibri Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label11.Location = new System.Drawing.Point(43, 551);
+            this.label11.Location = new System.Drawing.Point(48, 472);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(256, 21);
             this.label11.TabIndex = 33;
@@ -90,7 +90,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(588, 530);
+            this.label10.Location = new System.Drawing.Point(593, 451);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(30, 24);
             this.label10.TabIndex = 32;
@@ -100,7 +100,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(43, 517);
+            this.label9.Location = new System.Drawing.Point(48, 438);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(129, 21);
             this.label9.TabIndex = 31;
@@ -111,7 +111,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Britannic Bold", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Orange;
-            this.label8.Location = new System.Drawing.Point(560, 491);
+            this.label8.Location = new System.Drawing.Point(565, 412);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 20);
             this.label8.TabIndex = 30;
@@ -122,7 +122,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Britannic Bold", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Orange;
-            this.label7.Location = new System.Drawing.Point(43, 478);
+            this.label7.Location = new System.Drawing.Point(48, 399);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(78, 20);
             this.label7.TabIndex = 29;
@@ -133,18 +133,18 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Britannic Bold", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Orange;
-            this.label6.Location = new System.Drawing.Point(27, 278);
+            this.label6.Location = new System.Drawing.Point(48, 290);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(177, 20);
+            this.label6.Size = new System.Drawing.Size(124, 20);
             this.label6.TabIndex = 28;
-            this.label6.Text = "Select Date And Time";
+            this.label6.Text = "Date And Time";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Crimson;
-            this.label4.Location = new System.Drawing.Point(37, 148);
+            this.label4.Location = new System.Drawing.Point(48, 159);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(103, 24);
             this.label4.TabIndex = 27;
@@ -155,7 +155,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 105);
+            this.label2.Location = new System.Drawing.Point(48, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(128, 21);
             this.label2.TabIndex = 26;
@@ -201,7 +201,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label1.Font = new System.Drawing.Font("Britannic Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Orange;
-            this.label1.Location = new System.Drawing.Point(211, 23);
+            this.label1.Location = new System.Drawing.Point(136, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(257, 33);
             this.label1.TabIndex = 26;
@@ -211,7 +211,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(756, 687);
+            this.ClientSize = new System.Drawing.Size(754, 581);
             this.Controls.Add(this.panel1);
             this.Name = "EventDetailsForm";
             this.Text = "EventDetailsForm";

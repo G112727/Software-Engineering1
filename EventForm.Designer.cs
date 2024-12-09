@@ -274,6 +274,15 @@
             // 
             // textBox1
             // 
+            this.textBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            "Art Gathering",
+            "Mindfull Kickboxing",
+            "Turn up and Write",
+            "Monthly Restorative Rest",
+            "Focusing Workshop",
+            "Partner Assisted Yoga"});
+            this.textBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.textBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.textBox1.Location = new System.Drawing.Point(276, 121);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(283, 22);
@@ -664,7 +673,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1369, 679);
+            this.ClientSize = new System.Drawing.Size(1390, 700);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.Focusing_Workshop);

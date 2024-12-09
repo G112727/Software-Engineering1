@@ -21,6 +21,7 @@ namespace Software_Engineering1
         public EventForm()
         {
             InitializeComponent();
+            //textBox1.AutoCompleteCustomSource = ;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

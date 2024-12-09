@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.roundedPanel1 = new Software_Engineering1.RoundedPanel();
+            this.button2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvPendingApprovals = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.roundedPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPendingApprovals)).BeginInit();
@@ -42,6 +42,7 @@
             // 
             // roundedPanel1
             // 
+            this.roundedPanel1.BackColor = System.Drawing.Color.MistyRose;
             this.roundedPanel1.BorderRadius = 20;
             this.roundedPanel1.Controls.Add(this.button2);
             this.roundedPanel1.Controls.Add(this.label2);
@@ -49,10 +50,21 @@
             this.roundedPanel1.Controls.Add(this.label1);
             this.roundedPanel1.Controls.Add(this.dgvPendingApprovals);
             this.roundedPanel1.Controls.Add(this.button1);
-            this.roundedPanel1.Location = new System.Drawing.Point(12, 35);
+            this.roundedPanel1.Location = new System.Drawing.Point(12, 22);
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Size = new System.Drawing.Size(863, 547);
             this.roundedPanel1.TabIndex = 7;
+            this.roundedPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel1_Paint);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(697, 493);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(136, 37);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Sign Out";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label2
             // 
@@ -83,7 +95,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Orange;
-            this.label1.Location = new System.Drawing.Point(23, 277);
+            this.label1.Location = new System.Drawing.Point(23, 266);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(155, 20);
             this.label1.TabIndex = 7;
@@ -111,15 +123,6 @@
             this.button1.Text = "Approve";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(697, 493);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(136, 37);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Sign Out";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // AdminForm
             // 

@@ -25,16 +25,6 @@ namespace Software_Engineering1
 
         }
 
-        private void ForgetpasswordForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -108,8 +98,6 @@ namespace Software_Engineering1
                     MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
-
         }
 
 

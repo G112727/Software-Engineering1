@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Software_Engineering1.DashboardForm;
 
 namespace Software_Engineering1
 {
@@ -35,6 +36,16 @@ namespace Software_Engineering1
             membershipForm membershipform = new membershipForm();
             membershipform.Show();
             this.Close();
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+            LoggedInUser.Username = "Guest";
+            LoggedInUser.IsLoggedIn = false;
+
+            LoginForm form5 = new LoginForm();
+            this.Hide();
+            form5.Show();
         }
     }
 }

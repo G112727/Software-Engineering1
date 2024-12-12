@@ -102,21 +102,11 @@ namespace Software_Engineering1
 
         }
 
-        private void roundedPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            
-        }
-
+ 
         private void button7_Click(object sender, EventArgs e)
         {
             feedbackForm feedbackForm = new feedbackForm();
             feedbackForm.Show();
-
 
         }
 

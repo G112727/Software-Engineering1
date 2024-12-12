@@ -61,7 +61,7 @@
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Size = new System.Drawing.Size(1025, 547);
             this.roundedPanel1.TabIndex = 7;
-            this.roundedPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel1_Paint);
+           
             // 
             // dataGridView2
             // 
@@ -114,7 +114,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(741, 201);
             this.dataGridView1.TabIndex = 8;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+           
             // 
             // label1
             // 
@@ -137,7 +137,7 @@
             this.dgvPendingApprovals.RowTemplate.Height = 24;
             this.dgvPendingApprovals.Size = new System.Drawing.Size(307, 201);
             this.dgvPendingApprovals.TabIndex = 6;
-            this.dgvPendingApprovals.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPendingApprovals_CellContentClick);
+         
             // 
             // button1
             // 

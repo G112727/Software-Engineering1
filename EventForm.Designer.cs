@@ -138,7 +138,6 @@
             this.button4.Text = "shop";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
             // 
@@ -175,7 +174,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1346, 63);
             this.panel2.TabIndex = 11;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label19
             // 
@@ -194,7 +192,7 @@
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label18.Location = new System.Drawing.Point(1220, 14);
+            this.label18.Location = new System.Drawing.Point(1224, 14);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(71, 24);
             this.label18.TabIndex = 6;
@@ -223,7 +221,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1346, 345);
             this.panel1.TabIndex = 12;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label3
             // 
@@ -257,7 +254,6 @@
             this.label1.Size = new System.Drawing.Size(268, 25);
             this.label1.TabIndex = 4;
             this.label1.Text = "Welcome to Together Culture";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // roundedPanel1
             // 
@@ -270,7 +266,6 @@
             this.roundedPanel1.Name = "roundedPanel1";
             this.roundedPanel1.Size = new System.Drawing.Size(742, 239);
             this.roundedPanel1.TabIndex = 3;
-            this.roundedPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel1_Paint);
             // 
             // textBox1
             // 
@@ -333,7 +328,6 @@
             this.label7.Size = new System.Drawing.Size(347, 36);
             this.label7.TabIndex = 17;
             this.label7.Text = "Upcoming Events Diary";
-            this.label7.Click += new System.EventHandler(this.label7_Click_1);
             // 
             // label8
             // 
@@ -412,7 +406,6 @@
             this.label14.Size = new System.Drawing.Size(211, 25);
             this.label14.TabIndex = 29;
             this.label14.Text = "Partner  Assisted Yoga";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label15
             // 
@@ -423,7 +416,6 @@
             this.label15.Size = new System.Drawing.Size(187, 25);
             this.label15.TabIndex = 30;
             this.label15.Text = "Focusing Workshop";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label16
             // 
@@ -482,7 +474,6 @@
             this.button6.TabIndex = 35;
             this.button6.Text = "SIGN UP";
             this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // panel3
             // 
@@ -612,7 +603,6 @@
             this.roundedPanel8.Name = "roundedPanel8";
             this.roundedPanel8.Size = new System.Drawing.Size(287, 199);
             this.roundedPanel8.TabIndex = 27;
-            this.roundedPanel8.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel8_Paint);
             // 
             // roundedPanel7
             // 
@@ -663,7 +653,6 @@
             this.roundedPanel4.Name = "roundedPanel4";
             this.roundedPanel4.Size = new System.Drawing.Size(287, 199);
             this.roundedPanel4.TabIndex = 15;
-            this.roundedPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.roundedPanel4_Paint);
             // 
             // EventForm
             // 
@@ -673,7 +662,7 @@
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1390, 700);
+            this.ClientSize = new System.Drawing.Size(1411, 721);
             this.Controls.Add(this.button14);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.Focusing_Workshop);

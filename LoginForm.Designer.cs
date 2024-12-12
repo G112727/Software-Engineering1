@@ -100,7 +100,7 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(213, 22);
             this.txtUsername.TabIndex = 0;
-            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
+            //this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // btnCreateAccount
             // 
@@ -152,7 +152,7 @@
             this.Controls.Add(this.gradientPanel1);
             this.Name = "LoginForm";
             this.Text = "Form5";
-            this.Load += new System.EventHandler(this.Form5_Load);
+            //this.Load += new System.EventHandler(this.Form5_Load);
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

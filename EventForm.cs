@@ -24,21 +24,13 @@ namespace Software_Engineering1
             //textBox1.AutoCompleteCustomSource = ;
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             label18.Text = $"{LoggedInUser.Username}";
+            label19.Visible = LoggedInUser.IsLoggedIn;
         }
 
-        private void button2_MouseEnter(object sender, EventArgs e)
-        {
-
-        }
-
+    
         private void button2_Click(object sender, EventArgs e)
         {
             DashboardForm dashboardForm = new DashboardForm();
@@ -53,81 +45,14 @@ namespace Software_Engineering1
             this.Hide();
         }
 
-        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             ShopForm shopform = new ShopForm();
             shopform.Show();
-        }
+        } 
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button16_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void roundedPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        { }
-
+      
         private void button5_Click(object sender, EventArgs e)
         {
 
@@ -190,47 +115,7 @@ namespace Software_Engineering1
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
-        
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void roundedPanel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void roundedPanel8_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+      
 
         private void button10_Click(object sender, EventArgs e)
         {
@@ -253,11 +138,7 @@ namespace Software_Engineering1
 
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
+    
         private void button14_Click(object sender, EventArgs e)
 
         {
@@ -312,15 +193,7 @@ namespace Software_Engineering1
 
         }
 
-        private void button15_Click_1(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void button16_Click_1(object sender, EventArgs e)
-        {
-
-        }
+  
 
         private void button12_Click(object sender, EventArgs e)
         {
@@ -444,9 +317,6 @@ namespace Software_Engineering1
             profilePage.Show();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
     }
 }

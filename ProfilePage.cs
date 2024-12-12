@@ -124,14 +124,6 @@ namespace Software_Engineering1
             comboBox1.Enabled = false;
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
+      
     }
 }

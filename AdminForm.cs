@@ -71,47 +71,6 @@ namespace Software_Engineering1
                 }
             }
         }
-
-        //private void LoadUserDetails(string searchQuery = "")
-        //{
-        //    using (MySqlConnection connection = new MySqlConnection(connectionString))
-        //    {
-        //        try
-        //        {
-        //            connection.Open();
-
-        //            string query = "SELECT Username, MembershipType, Role, PredominantInterest FROM users";
-        //            if (!string.IsNullOrEmpty(searchQuery))
-        //            {
-        //                query += " WHERE Username LIKE @searchQuery";
-        //            }
-
-        //            using (MySqlCommand command = new MySqlCommand(query, connection))
-        //            {
-        //                if (!string.IsNullOrEmpty(searchQuery))
-        //                {
-        //                    command.Parameters.AddWithValue("@searchQuery", $"%{searchQuery}%");
-        //                }
-
-        //                using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
-        //                {
-        //                    DataTable dataTable = new DataTable();
-        //                    adapter.Fill(dataTable);
-        //                    dataGridView1.DataSource = dataTable;
-        //                }
-        //            }
-        //        }
-        //        catch (Exception ex)
-        //        {
-        //            MessageBox.Show($"An error occurred while loading user details: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //        }
-        //    }
-        //}
-
-
-
-
-
         private void InitializeAutoComplete()
         {
             AutoCompleteStringCollection autoComplete = new AutoCompleteStringCollection();
@@ -179,10 +138,7 @@ namespace Software_Engineering1
 
         }
 
-        
-       
-
-
+    
         private void LoadPendingApprovals()
         {
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -255,44 +211,11 @@ namespace Software_Engineering1
             }
         }
 
-        private void txtUsernameToApprove_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtUsernameToAssign_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbMembershipType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dgvPendingApprovals_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void roundedPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
-
-
-
         private void button2_Click(object sender, EventArgs e)
         {
             DashboardForm dashboardForm = new DashboardForm();
             dashboardForm.Show();
+            this.Close();
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)

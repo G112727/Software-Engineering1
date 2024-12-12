@@ -147,7 +147,7 @@
             this.Controls.Add(this.gradientPanel1);
             this.Name = "ForgetpasswordForm";
             this.Text = "ForgetpasswordFormcs";
-            this.Load += new System.EventHandler(this.ForgetpasswordForm_Load);
+            //this.Load += new System.EventHandler(this.ForgetpasswordForm_Load);
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

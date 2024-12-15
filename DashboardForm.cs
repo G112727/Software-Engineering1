@@ -50,7 +50,7 @@ namespace Software_Engineering1
                 }
             }
         }
-        
+        //inin
         public static class LoggedInUser
         {
             private static string _username = "Guest";

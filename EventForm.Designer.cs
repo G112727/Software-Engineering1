@@ -119,7 +119,6 @@
             this.button1.Text = "Events";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
@@ -282,6 +281,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(283, 22);
             this.textBox1.TabIndex = 5;
+          
             // 
             // label6
             // 

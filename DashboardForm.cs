@@ -26,7 +26,6 @@ namespace Software_Engineering1
 
             EventForm form1 = new EventForm();
             form1.Show();
-
             this.Hide();
         }
 
@@ -83,18 +82,6 @@ namespace Software_Engineering1
             form5.Show();
         }
 
-        private void button12_Click(object sender, EventArgs e)
-        {
-
-            //LoggedInUser.Username = "Guest";
-            //LoggedInUser.IsLoggedIn = false;
-
-            //Form5 form5 = new Form5();
-            //this.Hide();
-            //form5.Show();
-            
-        }
-
         private void Form6_Load(object sender, EventArgs e)
         {
             label2.Text = $"{LoggedInUser.Username}";
@@ -143,5 +130,7 @@ namespace Software_Engineering1
             shopform.Show();
             this.Hide();
         }
+
+       
     }
 }

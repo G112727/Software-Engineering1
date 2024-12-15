@@ -112,7 +112,7 @@ namespace Software_Engineering1
                 {
                     conn.Open();
 
-                    string query = "SELECT * FROM user_bookings"; // Adjust columns if needed
+                    string query = "SELECT * FROM user_bookings"; 
                     MySqlCommand cmd = new MySqlCommand(query, conn);
 
                     MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
@@ -215,7 +215,7 @@ namespace Software_Engineering1
         {
             DashboardForm dashboardForm = new DashboardForm();
             dashboardForm.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)

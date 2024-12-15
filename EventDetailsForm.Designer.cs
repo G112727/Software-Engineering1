@@ -149,7 +149,7 @@
             this.label4.Size = new System.Drawing.Size(103, 24);
             this.label4.TabIndex = 27;
             this.label4.Text = "description";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            //this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label2
             // 
@@ -206,6 +206,7 @@
             this.label1.Size = new System.Drawing.Size(257, 33);
             this.label1.TabIndex = 26;
             this.label1.Text = "Turn Up and Write";
+            //this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // EventDetailsForm
             // 

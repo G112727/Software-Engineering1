@@ -1,105 +1,99 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using MySqlConnector;
 using static Software_Engineering1.DashboardForm;
 
+
+//SUMMARY 
+//THIS FORM IS MAINLY USED FOR SEARCHING FOR SPECIFIC EVENTS AS WELL AS BOOK EVENTS 
+//I HAVE USED PHPMYADMIN AS MY DATABASE SOFTWARE 
+//SUMMARY
 
 namespace Software_Engineering1
 {
     
     public partial class EventForm : Form
     {
-        string connectionString = "server=localhost;uid=root;pwd=;database=theevents";
+        string connectionString = "server=localhost;uid=root;pwd=;database=theevents"; // connection string 
         public EventForm()
         {
-            InitializeComponent();
-            //textBox1.AutoCompleteCustomSource = ;
+            InitializeComponent(); //initializes Event form
+           
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e) //Retreives username and displays profile label if visible 
         {
             label18.Text = $"{LoggedInUser.Username}";
             label19.Visible = LoggedInUser.IsLoggedIn;
         }
 
     
-        private void button2_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // button click to go to dahsboard 
         {
             DashboardForm dashboardForm = new DashboardForm();
             dashboardForm.Show();
-            this.Close();
+            this.Close(); // closes current form 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e) // button click to go to membership form 
         {
             membershipForm membershipForm = new membershipForm();
             membershipForm.Show();
-            this.Hide();
+            this.Hide(); //hides current form 
         }
 
+      //SUMMARY 
+      // button5_Click  IS MAINLY USED FOR THE SEARCHING SPECIFIC EVENT 
+      //AS WELL AS PASS THOES EVENT DETAILS TO THE EventDetailsForm
+      //SUMMARY 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            ShopForm shopform = new ShopForm();
-            shopform.Show();
-        } 
 
-      
-        private void button5_Click(object sender, EventArgs e)
-        {
+        private void button5_Click(object sender, EventArgs e) 
+        {  
+            string searchedEvent = textBox1.Text.Trim(); //retrieve text from textBox1
 
-           
-            string searchedEvent = textBox1.Text.Trim();
-
-            if (string.IsNullOrEmpty(searchedEvent))
+            if (string.IsNullOrEmpty(searchedEvent))  //validate if user entered an event name 
             {
-                label17.Text = "Please enter an event name.";
-                label17.ForeColor = System.Drawing.Color.Red;
-                return;
+                label17.Text = "Please enter an event name."; 
+                label17.ForeColor = System.Drawing.Color.Red; //gives label colour 
+                return; 
             }
-
+            // connect to database using MYSQL
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 try
                 {
-                    connection.Open();
+                    connection.Open(); //Open database connection
+
+                    //SQL Query to search for event name and retrieve details 
 
                     string query = "SELECT `event_id` , `event_description` , `event_date` FROM events1 WHERE `event_name` = @eventName LIMIT 1;";
                     using (MySqlCommand command = new MySqlCommand(query, connection))
                     {
-                        command.Parameters.AddWithValue("@eventName", searchedEvent);
+                        command.Parameters.AddWithValue("@eventName", searchedEvent); //searches using event name 
 
                         using (MySqlDataReader reader = command.ExecuteReader())
                         {
                             if (reader.Read())
                             {
-                                // Event found
+                                // Extrat details from details 
                                 int eventId = reader.GetInt32("event_id");
                                 string eventDescription = reader.GetString("event_description");
                                 DateTime eventDate = reader.GetDateTime("event_date");
 
-                                label17.Text = $"Event found: {searchedEvent} on {eventDate:yyyy-MM-dd}";
-                                label17.ForeColor = System.Drawing.Color.Green;
+                                label17.Text = $"Event found: {searchedEvent} on {eventDate:yyyy-MM-dd}"; // displays event name and date 
+                                label17.ForeColor = System.Drawing.Color.Green; 
 
-                                // Show success popup
+                                // Display success popup
                                 MessageBox.Show("Event is available! Click 'Details' to see more.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                // Enable the details button and attach click handler
-                                //button14.Click += button14_Click;
+                                // Enable the details button and attach click handlerS
                                 button14.Tag = (eventId, searchedEvent, eventDescription, eventDate); // Pass event details using the button's Tag property
                                 button14.Enabled = true;
                             }
                             else
                             {
-                                label17.Text = "Event not found.";
+                                label17.Text = "Event not found.";  // text if event is not found 
                                 label17.ForeColor = System.Drawing.Color.Red;
 
                                 // Disable the details button
@@ -115,80 +109,70 @@ namespace Software_Engineering1
             }
         }
 
-      
 
-        private void button10_Click(object sender, EventArgs e)
+      
+       
+        private void button10_Click(object sender, EventArgs e) // event handler to see if user is logged in to book events 
         {
-            if (!LoggedInUser.IsLoggedIn)
+            if (!LoggedInUser.IsLoggedIn)  
             {
-                MessageBox.Show("Please log in to access this feature.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                this.Hide();
+                //checks if user is logged in and displays warning message if not
+                MessageBox.Show("Please log in to access this feature.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning); 
+                this.Hide(); //hides current form 
                 LoginForm loginForm = new LoginForm();
-                loginForm.Show();
+                loginForm.Show(); // redirects to another form 
             }
 
             else
             {
-                string eventname = Mindfull_Kickboxing.Name;
-                eventname = eventname.Replace("_", " ");
-                BookingForm bookingForm = new BookingForm();
-                bookingForm.LoadEventDetail(eventname);
+                // if user is logged in 
+                string eventname = Mindfull_Kickboxing.Name; // event name 
+                eventname = eventname.Replace("_", " "); //replaces underscores with spaces in event name 
+                BookingForm bookingForm = new BookingForm(); // moves to booking form 
+                bookingForm.LoadEventDetail(eventname); //loads the details to booking form 
                 bookingForm.Show();
             }
 
         }
 
-    
-        private void button14_Click(object sender, EventArgs e)
+    //SUMMARY 
+    //THIS CODE IS MAINLY USED TO TRANSFER EVENT DETAILS TO THE EventDetailsForm
+    //SUMMARY
 
+        private void button14_Click(object sender, EventArgs e)
+        // event handler to retrive event details with the help button14.tg
         {
 
-            if (button14.Tag is ValueTuple<int, string, string, DateTime> eventDetails)
+            if (button14.Tag is ValueTuple<int, string, string, DateTime> eventDetails) 
             {
                 int eventId = eventDetails.Item1;
                 string eventName = eventDetails.Item2;
                 string eventDescription = eventDetails.Item3;
                 DateTime eventDate = eventDetails.Item4;
 
-                // Open the EventDetailsForm
+                // Open the EventDetailsForm with the retrieved event details 
                 EventDetailsForm eventDetailsForm = new EventDetailsForm(eventId, eventName, eventDescription, eventDate);
                 eventDetailsForm.Show();
 
-
+                //checks is form is null or disposed off
                 if (eventDetailsForm == null || eventDetailsForm.IsDisposed)
                 {
-                    // Create a new instance if it's null or disposed
+                    // Creates a new instance if forms not available 
                     eventDetailsForm = new EventDetailsForm(eventId, eventName, eventDescription, eventDate);
                     eventDetailsForm.Show();
                 }
                 else
                 {
-                    // Bring the existing form to the front
+                    // Brings the  form to the front
                     eventDetailsForm.BringToFront();
                 }
 
                 }
                 else
                 {
+                    // if button14 tag is unable to get event details displays error message 
                     MessageBox.Show("No event details available. Please search for an event first.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-
-            //if (button14.Tag is Tuple<int, string, string, DateTime> eventDetails)
-            //{
-
-
-
-
-            //    //int eventId = eventDetails.Item1;
-            //    //string eventName = eventDetails.Item2;
-            //    //string eventDescription = eventDetails.Item3;
-            //    //DateTime eventDate = eventDetails.Item4;
-
-            //    //EventDetailsForm eventDetailsForm = new EventDetailsForm(eventId, eventName, eventDescription, eventDate);
-            //    //eventDetailsForm.Show();
-
-            //}
 
 
         }
@@ -197,14 +181,15 @@ namespace Software_Engineering1
 
         private void button12_Click(object sender, EventArgs e)
         {
-            LoginForm form5 = new LoginForm();
-            form5.Show();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e) //event handler for event name Turn_Up_and_Write.Name;
         {
-            if (!LoggedInUser.IsLoggedIn)
+            if (!LoggedInUser.IsLoggedIn) 
             {
+                //checks if user is logged in and displays warning message if not
                 MessageBox.Show("Please log in to access this feature.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.Hide();
                 LoginForm form5 = new LoginForm();
@@ -213,10 +198,10 @@ namespace Software_Engineering1
 
             else
             {
-                string eventname = Turn_Up_and_Write.Name;
-                eventname = eventname.Replace("_", " ");
+                string eventname = Turn_Up_and_Write.Name; //event name
+                eventname = eventname.Replace("_", " ");//replaces underscores with spaces in event name
                 BookingForm form2 = new BookingForm();
-                form2.LoadEventDetail(eventname);
+                form2.LoadEventDetail(eventname); //loads the details to booking form 
                 form2.Show();
             }
         }
@@ -228,10 +213,11 @@ namespace Software_Engineering1
 
         }
 
-        private void Partner_Assisted_Yoga_Click(object sender, EventArgs e)
+        private void Partner_Assisted_Yoga_Click(object sender, EventArgs e)  //event handler for event name Partner_Assisted_Yoga_Click
         {
             if (!LoggedInUser.IsLoggedIn)
             {
+                //checks if user is logged in and displays warning message if not
                 MessageBox.Show("Please log in to access this feature.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.Hide();
                 LoginForm form5 = new LoginForm();
@@ -241,35 +227,36 @@ namespace Software_Engineering1
             else
             {
                 string eventname = Partner_Assisted_Yoga.Name;
-                eventname = eventname.Replace("_", " ");
+                eventname = eventname.Replace("_", " "); // replaces underscores with spaces in event name
                 BookingForm form2 = new BookingForm();
-                form2.LoadEventDetail(eventname);
+                form2.LoadEventDetail(eventname);//loads the details to booking form 
                 form2.Show();
             }
         }
 
-        private void Focusing_Workshop_Click(object sender, EventArgs e)
+        private void Focusing_Workshop_Click(object sender, EventArgs e) //event handler for event name Focusing_Workshop_Click
         {
             if (!LoggedInUser.IsLoggedIn)
             {
+                //checks if user is logged in and displays warning message if not
                 MessageBox.Show("Please log in to access this feature.", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 this.Hide();
-                LoginForm form5 = new LoginForm();
+                LoginForm form5 = new LoginForm(); 
                 form5.Show();
             }
 
             else
             {
                 string eventname = Focusing_Workshop.Name;
-                eventname = eventname.Replace("_", " ");
+                eventname = eventname.Replace("_", " "); // replaces underscores with spaces in event name
                 BookingForm form2 = new BookingForm();
-                form2.LoadEventDetail(eventname);
+                form2.LoadEventDetail(eventname); //loads the details to booking form
                 form2.Show();
             }
 
         }
 
-        private void Art_Gathering_Click(object sender, EventArgs e)
+        private void Art_Gathering_Click(object sender, EventArgs e) //event handler for event name Art_Gathering_Click
         {
               if (!LoggedInUser.IsLoggedIn)
             {
@@ -282,14 +269,14 @@ namespace Software_Engineering1
             else
             {
                 string eventname = Art_Gathering.Name;
-                eventname = eventname.Replace("_", " ");
-                BookingForm form2 = new BookingForm();
+                eventname = eventname.Replace("_", " "); // replaces underscores with spaces in event name
+                BookingForm form2 = new BookingForm();//loads the details to booking form
                 form2.LoadEventDetail(eventname);
                 form2.Show();
             }
         }
 
-        private void Monthly_Restorative_Rest_Click(object sender, EventArgs e)
+        private void Monthly_Restorative_Rest_Click(object sender, EventArgs e) //event handler for event name  Monthly_Restorative_Rest_Click
         {
             if (!LoggedInUser.IsLoggedIn)
             {
@@ -301,22 +288,22 @@ namespace Software_Engineering1
 
             else
             {
-                string eventname = Monthly_Restorative_Rest.Name;
-                eventname = eventname.Replace("_", " ");
+                string eventname = Monthly_Restorative_Rest.Name; // event name 
+                eventname = eventname.Replace("_", " "); //replaces underscores with spaces in event name
                 BookingForm form2 = new BookingForm();
-                form2.LoadEventDetail(eventname);
+                form2.LoadEventDetail(eventname); //loads the details to booking form
                 form2.Show();
             }
         }
 
-        private void label19_Click(object sender, EventArgs e)
+        private void label19_Click(object sender, EventArgs e) // event handler for label click 
         {
            
-            string currentUsername = LoggedInUser.Username;
-            ProfilePage profilePage = new ProfilePage(currentUsername);
+            string currentUsername = LoggedInUser.Username;  
+            ProfilePage profilePage = new ProfilePage(currentUsername); // creates instance for ProfilePage 
             profilePage.Show();
         }
 
-       
+   
     }
 }

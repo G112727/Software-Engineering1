@@ -84,7 +84,7 @@ namespace Software_Engineering1
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(702, 523);
             this.panel1.TabIndex = 9;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            //this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label14
             // 
@@ -131,7 +131,7 @@ namespace Software_Engineering1
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(50, 22);
             this.numericUpDown1.TabIndex = 37;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            //this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // textBox2
             // 
@@ -198,7 +198,7 @@ namespace Software_Engineering1
             this.label8.Size = new System.Drawing.Size(78, 20);
             this.label8.TabIndex = 30;
             this.label8.Text = "Capacity";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
+            //this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // label7
             // 
@@ -286,7 +286,7 @@ namespace Software_Engineering1
             this.Controls.Add(this.panel1);
             this.Name = "Form2";
             this.Text = "Form2";
-            this.Load += new System.EventHandler(this.Form2_Load);
+            //this.Load += new System.EventHandler(this.Form2_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
